@@ -18,3 +18,10 @@ main {
   justify-content: start;
   align-items: end;
 }
+
+.active-card {
+  display: flex;
+  width: 100%;
+  content: fit-content;
+  justify-items: center;
+}

@@ -23,6 +23,52 @@
   </header>
 
   <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card active-card">
+            <h1 class="text-end fs-4 border-bottom">Jot Count: </h1>
+            <form class="row g-3 align-items-center justify-content-between p-4">
+              <div class="col-auto d-flex justify-content-between">
+                <label for="exampleColorInput" class="form-label fw-bold fs-4">Note Color:</label>
+                <input type="color" class="form-control form-control-color mx-5" id="exampleColorInput" value="#563d7c"
+                  title="Choose your color">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control fs-3" placeholder="Note's Title" aria-label="text-box"
+                    aria-describedby="text-box">
+                  <button class="btn btn-outline-dark btn-danger fw-bold" type="submit" id="button-addon2"><i
+                      class="mdi mdi-plus-thick"></i> Create Note</button>
+                </div>
+              </div>
+            </form>
+            <div class="text-center fs-3 mb-2">MY Notes</div>
+            <hr>
+            <div class="text-start" id=""></div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h1 class="text-center">My Active Note's Title</h1>
+          <hr>
+          <div class="fs-2">Created On:</div>
+          <div class="fs-2">Last Updated On:</div>
+          <div class="text-end">
+            <button class="btn btn-danger" type="delete">
+              <i class="mdi mdi-trash-can-outline"></i> Delete
+            </button>
+            <button class="btn btn-primary text-light" type="submit">
+              <i class="mdi mdi-folder-plus"></i> Save
+            </button>
+          </div>
+          <div class="current-note mb-3">
+            <div class="mb-3">
+              <textarea class="form-control border border-thick border-warning p-3 mp-2 fs-3 mt-3" id="textRegion"
+                rows="3">Active Note's Body</textarea>
+            </div>
+          </div>
+          <div class="text-end">Word Count: </div>
+        </div>
+      </div>
+    </div>
 
 
   </main>
