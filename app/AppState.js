@@ -4,14 +4,13 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
 
-  /**@type {import('./models/Example.js').Example[]} */
-  examples = []
+
 
   Note = [
 
     new Note({
       id: '',
-      title: 'note1',
+      title: 'Note 1',
       color: 'Yellow',
       body: "this is note1's body.",
       createdAt: '',
@@ -19,7 +18,7 @@ class ObservableAppState extends EventEmitter {
     }),
     new Note({
       id: '',
-      title: 'note2',
+      title: 'Note 2',
       color: 'Blue',
       body: "this is note2's body, with its blue text.",
       createdAt: '',
@@ -27,7 +26,7 @@ class ObservableAppState extends EventEmitter {
     }),
     new Note({
       id: '',
-      title: 'note3',
+      title: 'Note 3',
       color: 'Green',
       body: "this is note3's body, with it's bold body.",
       createdAt: '',
