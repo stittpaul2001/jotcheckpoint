@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": ".vscode",
+      "path": ".vscode"
+    },
+    {
+      "name": "jotcheckpoint",
+      "path": "jotcheckpoint"
+    },
+    {
+      "name": "mvcgamenight",
+      "path": "mvcgamenight"
+    },
+    {
+      "name": "mvcjunglejumble",
+      "path": "mvcjunglejumble"
+    },
+    {
+      "name": "summer25_gregslist_mvc",
+      "path": "summer25_gregslist_mvc"
+    },
+    {
+      "name": "wk3-vendr",
+      "path": "wk3-vendr"
+    },
+    {
+      "name": "wk3day1",
+      "path": "wk3day1"
+    }
+  ]
+}
