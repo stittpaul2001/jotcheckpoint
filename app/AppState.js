@@ -6,13 +6,13 @@ class ObservableAppState extends EventEmitter {
 
 
 
-  Note = [
+  Notes = [
 
     new Note({
       id: '',
       title: 'Note 1',
       color: 'Yellow',
-      body: "this is note1's body.",
+      body: "this is Note 1's body, with it's small text-content. Saying, hello friend!",
       createdAt: '',
       updatedAt: '',
     }),
@@ -20,7 +20,7 @@ class ObservableAppState extends EventEmitter {
       id: '',
       title: 'Note 2',
       color: 'Blue',
-      body: "this is note2's body, with its blue text.",
+      body: "This is Note 2's body, with its medium size text content. Explaining size doesn't matter.",
       createdAt: '',
       updatedAt: '',
     }),
@@ -28,7 +28,7 @@ class ObservableAppState extends EventEmitter {
       id: '',
       title: 'Note 3',
       color: 'Green',
-      body: "this is note3's body, with it's bold body.",
+      body: "This is Note 3's body, with it's bigger, that has a lot of context to it's body. Explaining that it is super duper long!",
       createdAt: '',
       updatedAt: '',
     })

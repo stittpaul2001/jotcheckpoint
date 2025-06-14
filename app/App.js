@@ -4,6 +4,7 @@ class App {
 
 
   notesController = new NotesController()
+
 }
 
 window['app'] = new App()
