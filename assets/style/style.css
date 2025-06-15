@@ -10,6 +10,10 @@ main {
   display: flex;
   place-content: center;
   align-items: center;
+  background-image: url(../../background.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
 
 }
 
@@ -20,13 +24,20 @@ main {
   align-items: end;
 }
 
-.active-card {
+.left-card {
+  background-image: url(../../leftcard.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
-  width: 100%;
-  content: fit-content;
-  justify-items: center;
+}
+
+.right-card {
+  display: flex;
+  background-image: url(../../rightcard.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 textarea {
-  min-height: 70vh !important;
+  min-height: auto !important;
 }

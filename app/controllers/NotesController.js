@@ -46,9 +46,15 @@ export class NotesController {
 
   saveCurrentNote() {
     event.preventDefault()
+    console.log('saving your current note!')
+    const currentNoteForm = event.target
+    const textAreaBody = currentNoteForm
 
   }
 
+  deleteNote() {
+
+  }
 
 
 }

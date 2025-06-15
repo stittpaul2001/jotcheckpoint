@@ -22,11 +22,11 @@
     </nav>
   </header>
 
-  <main>
+  <main class="">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-5">
-          <div class="card active-card mb-2 px-2">
+          <div class="card left-card mb-2 px-2">
             <div class="fs-1 text-end text-decoration-underline fw-bold px-3"><i class="mdi mdi-note-multiple"></i>
               Jot-Count:
               <span class="text-end fs-1 border-bottom" id="Jot-Count">
@@ -35,8 +35,7 @@
             <!-- //STUB - creating a note section  -->
             <form onsubmit="app.notesController.createNote()">
               <div class="input-group mb-2">
-                <select required class="form-select" name="color" id="note-color"
-                  aria-label="Example select with button addon">
+                <select required class="form-select" name="color" id="note-color">
                   <option class="fs-5" selected>Choose Note Color</option>
                   <option class="fs-5" value="blue">Blue</option>
                   <option class="fs-5" value="green">Green</option>
@@ -49,8 +48,9 @@
                 <input required type="date" class="form-control" name="CreatedOn" id="note-createdOn-date">
               </div>
               <div class="d-flex">
-                <input type="text" class="form-control text-center" id="note-title" value="Title of your Note" required
-                  minlength="3 characters" maxlength="15 characters">
+                <label for="CreateTitle"></label>
+                <input required type="text" name="title" class="form-control form-input text-center" id="CreateTitle"
+                  minlength="3 characters" maxlength="15 characters" placeholder="Title">
                 <button title="createNote" class="btn btn-outline-dark btn-danger fw-bold fs-5" type="submit"><i
                     class="mdi mdi-plus-thick"></i> Create Note</button>
               </div>
@@ -68,27 +68,29 @@
           </div>
         </div>
         <!-- //STUB - Large Display content -->
-        <div id="active-note" class="col-md-7">
+        <div id="active-note" class="col-md-7 ">
+
 
           <!-- <h1 class="text-center">My Active Note's Title</h1>
-          <hr>
-          <div class="fs-2">Created On:</div>
-          <div class="fs-2">Last Updated On:</div>
-          <div class="text-end">
+            <hr>
+            <div class="fs-2">Created On:</div>
+            <div class="fs-2">Last Updated On:</div>
+            <div class="text-end">
             <button class="btn btn-danger" type="delete">
               <i class="mdi mdi-trash-can-outline"></i> Delete
             </button>
             <button class="btn btn-primary text-light" type="submit">
               <i class="mdi mdi-folder-plus"></i> Save
             </button>
-          </div>
-          <div class="current-note mb-3">
+            </div>
+            <div class="current-note mb-3">
             <div class="mb-3">
               <textarea class="form-control border border-thick border-warning p-3 mp-2 fs-3 mt-3" id="textRegion"
-                rows="3">Active Note's Body</textarea>
+              rows="3">Active Note's Body</textarea>
             </div>
-          </div> -->
+            </div> -->
           <div class="text-end">Word Count: </div>
+
         </div>
       </div>
     </div>
