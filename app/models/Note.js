@@ -30,7 +30,7 @@ export class Note {
   }
 
   get activeNoteTemplate() {
-    return `<div class="card right-card shadow px-2 mx-3">
+    return `<div class="card right-card border border-2 border-black  shadow px-2 mx-3 mt-2">
               <p class="text-center fw-bold fs-1 text-decoration-underline mt-3">${this.title}</p>
                 <div class="fs-4 fw-bold mx-3">Created On:
                   <span class="fw-normal fs-5"> ${this.createdAt}</span>
@@ -41,8 +41,8 @@ export class Note {
               </div>
               <form onsubmit="app.notesController.saveCurrentNote()" class="current-note mb-3">
                 <div class="mb-3">
-                  <textarea name="body" class="form-control border border-thick border-warning p-3 mp-2 fs-3 mt-3" id="note-body"
-                    rows="3">${this.body}</textarea>
+                  <textarea name="body" class="form-control border border-3 border-purple p-3 mp-2 fs-3 mt-3 text-center" id="note-body"
+                    rows="4">${this.body}</textarea>
                 </div>
                 <div class="text-end">
                   <button onclick="app.notesController.deleteNote('${this.id}')" class="btn btn-danger text-light btn-outline-dark fs-3" type="delete">

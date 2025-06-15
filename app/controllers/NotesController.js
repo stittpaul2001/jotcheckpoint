@@ -11,6 +11,7 @@ export class NotesController {
     AppState.on('Notes', this.drawNotesList)
     notesservice.showNotes()
 
+
   }
 
   drawNotesList() {
@@ -52,6 +53,8 @@ export class NotesController {
     // @ts-ignore
     const newTextAreaBody = noteForm.body.value
     notesservice.saveCurrentNote(newTextAreaBody)
+    //@ts-ignore
+
 
   }
 

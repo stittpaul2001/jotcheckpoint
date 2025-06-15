@@ -33,11 +33,17 @@ main {
 
 .right-card {
   display: flex;
-  background-image: url(../../rightcard.avif);
+  background-image: url(../../rightcard.avif) !important;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 50px;
+
 }
 
 textarea {
-  min-height: auto !important;
+  width: 100%;
+  min-height: 50px;
+  height: auto-fit !important;
+
+
 }
