@@ -12,7 +12,7 @@ class ObservableAppState extends EventEmitter {
       id: '',
       title: 'Note 1',
       color: 'Yellow',
-      body: "this is Note 1's body, with it's small text-content. Saying, hello friend!",
+      body: "This is Note 1's body, with it's small text-content. Saying, hello friend!",
       createdAt: '',
       updatedAt: '',
     }),

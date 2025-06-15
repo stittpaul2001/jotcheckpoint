@@ -1,6 +1,6 @@
 import { AppState } from "../AppState.js"
-import { Note } from "../models/Note.js";
 import { notesservice } from "../services/NotesService.js";
+import { getFormData } from "../utils/FormHandler.js";
 
 export class NotesController {
   constructor() {
@@ -8,6 +8,8 @@ export class NotesController {
     this.drawNotesList()
 
     AppState.on('activeNote', this.drawActiveNote)
+    AppState.on('Notes', this.drawNotesList)
+    notesservice.showNotes()
   }
 
   drawNotesList() {
@@ -31,6 +33,19 @@ export class NotesController {
   setActiveNote(noteId) {
     console.log('set active note!', noteId)
     notesservice.setActiveNote(noteId)
+
+  }
+
+  createNote() {
+    event.preventDefault()
+    const noteForm = event.target
+    const noteData = getFormData(noteForm)
+    // console.log('submitting', noteForm, noteData)
+    notesservice.createNote(noteData)
+  }
+
+  saveCurrentNote() {
+    event.preventDefault()
 
   }
 
