@@ -25,8 +25,12 @@ class NotesService {
     AppState.activeNote = pickNote
   }
 
-  saveCurrentNotes(newBody) {
-
+  saveCurrentNote(textAreaBody) {
+    const activeNote = AppState.activeNote
+    activeNote.body = textAreaBody
+    activeNote.updatedAt = new Date()
+    this.saveNotes()
+    AppState.emit('notes')
   }
   saveNotes() {
     const notes = AppState.Notes

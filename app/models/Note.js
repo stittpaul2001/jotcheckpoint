@@ -11,6 +11,7 @@ export class Note {
 
   }
 
+
   get noteTemplate() {
     return `<div onclick="app.notesController.setActiveNote('${this.id}')" class="btn" roll="button">
               <span class="card px-2 mx-1 border-5 mt-2 mb-2 ${this.id}" style="border-color: ${this.color}">
@@ -40,7 +41,7 @@ export class Note {
               </div>
               <form onsubmit="app.notesController.saveCurrentNote()" class="current-note mb-3">
                 <div class="mb-3">
-                  <textarea name="body" class="form-control border border-thick border-warning p-3 mp-2 fs-3 mt-3" id="textRegion"
+                  <textarea name="body" class="form-control border border-thick border-warning p-3 mp-2 fs-3 mt-3" id="note-body"
                     rows="3">${this.body}</textarea>
                 </div>
                 <div class="text-end">
@@ -55,6 +56,8 @@ export class Note {
             </div>
     `
   }
+
+
 
 }
 

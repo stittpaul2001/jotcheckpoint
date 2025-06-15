@@ -48,8 +48,10 @@ export class NotesController {
   saveCurrentNote() {
     event.preventDefault()
     console.log('saving your current note!')
-    const currentNoteForm = event.target
-    const textAreaBody = currentNoteForm
+    const noteForm = event.target
+    // @ts-ignore
+    const newTextAreaBody = noteForm.body.value
+    notesservice.saveCurrentNote(newTextAreaBody)
 
   }
 
