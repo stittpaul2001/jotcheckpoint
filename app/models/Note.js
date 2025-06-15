@@ -44,7 +44,7 @@ export class Note {
                     rows="3">${this.body}</textarea>
                 </div>
                 <div class="text-end">
-                  <button class="btn btn-danger text-light btn-outline-dark fs-3" type="delete">
+                  <button onclick="app.notesController.deleteNote('${this.id}')" class="btn btn-danger text-light btn-outline-dark fs-3" type="delete">
                     <i class="mdi mdi-trash-can-outline"></i> Delete
                   </button>
                   <button class="btn btn-primary btn-outline-dark text-light fs-3" type="submit">
