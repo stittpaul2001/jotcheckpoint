@@ -11,7 +11,7 @@ class NotesService {
     AppState.Notes.splice(noteIndex, 1)
     // AppState.activeNote = null
     this.saveNotes()
-    window.location.reload()
+    // window.location.reload() 
   }
 
   createNote(noteData) {
