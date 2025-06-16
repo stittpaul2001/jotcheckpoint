@@ -49,12 +49,12 @@ export class NotesController {
 
   saveActiveNote() {
     event.preventDefault()
-    console.log('saving your current note!')
-    const Form = event.target
+    // console.log('saving your current note!')
+    const form = event.target
     // @ts-ignore
-    const newTextAreaBody = Form.body.value
+    const newTextAreaBody = form.body.value
     notesservice.saveActiveNote(newTextAreaBody)
-    //@ts-ignore
+
 
 
   }

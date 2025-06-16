@@ -23,13 +23,14 @@ class NotesService {
     const pickNote = AppState.Notes.find(note => note.id == noteId)
 
     AppState.activeNote = pickNote
+    // console.log(AppState)
   }
 
   saveActiveNote(newTextAreaBody) {
     const activeNote = AppState.activeNote
     activeNote.body = newTextAreaBody
     activeNote.updatedAt = new Date()
-    console.log(AppState)
+    // console.log(AppState)
     this.saveNotes()
     AppState.emit('activeNote')
 
@@ -37,7 +38,8 @@ class NotesService {
   }
   saveNotes() {
     const notes = AppState.Notes
-    saveState('notes', AppState.Notes)
+    saveState('Notes', AppState.Notes)
+    console.log('note was saved!!!')
   }
   showNotes() {
     const notes = loadState('notes', [Note])

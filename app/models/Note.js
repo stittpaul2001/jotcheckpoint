@@ -39,7 +39,7 @@ export class Note {
               <div class="fs-4 fw-bold mx-3">Last Updated On: 
                 <span class="fw-normal fs-5">${this.updatedAt}</span>
               </div>
-              <form onsubmit="app.notesController.saveCurrentNote()" class="current-note mb-3">
+              <form onsubmit="app.notesController.saveActiveNote()" class="current-note mb-3">
                 <div class="mb-3">
                   <textarea name="body" class="form-control border border-3 border-purple p-3 mp-2 fs-3 mt-3 text-center" id="note-body"
                     rows="4">${this.body}</textarea>
