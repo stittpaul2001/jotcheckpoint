@@ -8,8 +8,8 @@ class NotesService {
     const notes = AppState.Notes
     const noteIndex = notes.findIndex(note => note.id == noteId)
     console.log('index to delete note is', + noteIndex)
-    // AppState.activeNote = null
     AppState.Notes.splice(noteIndex, 1)
+    AppState.activeNote = null
     this.saveNotes()
     // window.location.reload() 
   }
@@ -41,7 +41,7 @@ class NotesService {
   saveNotes() {
     const notes = AppState.Notes
     saveState('notes', AppState.Notes)
-    console.log('note was saved!!!')
+    // console.log('note was saved!!!')
 
   }
   showNotes() {

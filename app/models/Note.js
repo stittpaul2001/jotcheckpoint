@@ -11,6 +11,31 @@ export class Note {
 
   }
 
+  get createdAtDateFormmatted() {
+    return this.createdAt.toLocaleDateString('en-US', {
+      weekday: 'long',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+      dayPeriod: 'long',
+      hour: 'numeric',
+      minute: '2-digit',
+
+
+    })
+  }
+
+  get updatedAtFormatted() {
+    return this.updatedAt.toLocaleTimeString('en-US', {
+      weekday: 'short',
+      day: '2-digit',
+      month: '2-digit',
+      year: "numeric",
+      hour: 'numeric',
+      minute: '2-digit',
+      second: "2-digit"
+    })
+  }
 
   get noteTemplate() {
     return `<div onclick="app.notesController.setActiveNote('${this.id}')" class="btn" roll="button">
@@ -20,7 +45,7 @@ export class Note {
                 ${this.title}</p>
                 <p class="text-end d-flex justify-content-evenly">
                   <div class="fs-4 fw-bold">Created On:
-                    <span class="fw-normal fs-4">${this.createdAt}</span>
+                    <span class="fw-normal fs-4">${this.createdAtDateFormmatted}</span>
                   </div>
                 </p>
                 <p class="fs-3 text-center">${this.body}</p>
@@ -35,11 +60,11 @@ export class Note {
                 <span class="fw-bold"style="color: ${this.color}"><i class="mdi mdi-note-outline"></i></span>
                 ${this.title}</p>
                 <div class="fs-4 fw-bold mx-3">Created On:
-                  <span class="fw-normal fs-5"> ${this.createdAt}</span>
+                  <span class="fw-normal fs-5"> ${this.createdAtDateFormmatted}</span>
                 </div>
                 <br>
               <div class="fs-4 fw-bold mx-3">Last Updated On: 
-                <span class="fw-normal fs-5">${this.updatedAt}</span>
+                <span class="fw-normal fs-5">${this.updatedAtFormatted}</span>
               </div>
               <form onsubmit="app.notesController.saveActiveNote()" class="current-note mb-3">
                 <span class="mb-3 px-2 mx-1 border-5 mt-2" style="border-color: ${this.color}">
