@@ -44,15 +44,16 @@ export class NotesController {
     const noteData = getFormData(noteForm)
     // console.log('submitting', noteForm, noteData)
     notesservice.createNote(noteData)
+    this.drawNotesList()
   }
 
-  saveCurrentNote() {
+  saveActiveNote() {
     event.preventDefault()
     console.log('saving your current note!')
-    const noteForm = event.target
+    const Form = event.target
     // @ts-ignore
-    const newTextAreaBody = noteForm.body.value
-    notesservice.saveCurrentNote(newTextAreaBody)
+    const newTextAreaBody = Form.body.value
+    notesservice.saveActiveNote(newTextAreaBody)
     //@ts-ignore
 
 
