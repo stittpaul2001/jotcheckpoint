@@ -31,7 +31,9 @@ export class Note {
 
   get activeNoteTemplate() {
     return `<div class="card right-card border border-2 border-black  shadow px-2 mx-3 mt-2">
-              <p class="text-center fw-bold fs-1 text-decoration-underline mt-3">${this.title}</p>
+                <p class="text-center fs-1 fw-bold text-decoration-underline">
+                <span class="fw-bold"style="color: ${this.color}"><i class="mdi mdi-note-outline"></i></span>
+                ${this.title}</p>
                 <div class="fs-4 fw-bold mx-3">Created On:
                   <span class="fw-normal fs-5"> ${this.createdAt}</span>
                 </div>
@@ -40,10 +42,10 @@ export class Note {
                 <span class="fw-normal fs-5">${this.updatedAt}</span>
               </div>
               <form onsubmit="app.notesController.saveActiveNote()" class="current-note mb-3">
-                <div class="mb-3">
-                  <textarea name="body" class="form-control border border-3 border-purple p-3 mp-2 fs-3 mt-3 text-center" id="note-body"
+                <span class="mb-3 px-2 mx-1 border-5 mt-2" style="border-color: ${this.color}">
+                  <textarea name="body" class="form-control border-3 p-3 mp-2 fs-3 mt-3 text-center"style="border-color: ${this.color}" id="note-body"
                     rows="4">${this.body}</textarea>
-                </div>
+                </span>
                 <div class="text-end">
                   <button onclick="app.notesController.deleteNote('${this.id}')" class="btn btn-danger text-light btn-outline-dark fs-3" type="delete">
                     <i class="mdi mdi-trash-can-outline"></i> Delete

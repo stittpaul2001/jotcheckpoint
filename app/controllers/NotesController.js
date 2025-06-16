@@ -28,6 +28,7 @@ export class NotesController {
   drawActiveNote() {
     const activeNote = AppState.activeNote
     const activeNoteContent = activeNote.activeNoteTemplate
+
     const activeNoteElem = document.getElementById('active-note')
     activeNoteElem.innerHTML = activeNoteContent
   }
@@ -61,9 +62,11 @@ export class NotesController {
 
   deleteNote(noteId) {
     const deleteNote = window.confirm('Are you positive that you want to delete this note?')
-    if (!confirm) { return }
+    if (!confirm == false) return
     console.log('deleting note with the id of', + noteId)
+
     notesservice.deleteNote(noteId)
+
   }
 
 

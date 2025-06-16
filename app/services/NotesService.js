@@ -8,8 +8,8 @@ class NotesService {
     const notes = AppState.Notes
     const noteIndex = notes.findIndex(note => note.id == noteId)
     console.log('index to delete note is', + noteIndex)
-    AppState.Notes.splice(noteIndex, 1)
     // AppState.activeNote = null
+    AppState.Notes.splice(noteIndex, 1)
     this.saveNotes()
     // window.location.reload() 
   }
@@ -34,7 +34,7 @@ class NotesService {
     activeNote.updatedAt = new Date()
     // console.log(AppState)
     this.saveNotes()
-    AppState.emit('activeNote', 'note')
+    AppState.emit('activeNote')
 
 
   }

@@ -40,10 +40,10 @@ main {
 
 }
 
-textarea {
+.textarea {
   width: 100%;
   min-height: 50px;
   height: auto-fit !important;
-
+  border: 5 !important;
 
 }
